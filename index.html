@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        const clasificaciones = ["Ana", "Oswaldo", "Raúl", "Celia", "María", "Antonio"];
+        // imprimir clasificacion actual
+        document.writeln(clasificaciones + "<br>");
+
+        // Celia adelanta a Raúl
+        for (let i = 0; i < clasificaciones.length; i++) {
+            if (clasificaciones[i] == "Celia") {
+                clasificaciones[i] = "Raúl";
+                clasificaciones[i - 1] = "Celia";
+            }
+        }
+
+        // Antonio es descalificado
+        clasificaciones.pop();
+
+        // detras de ana y antes de oswaldo debe estar Roberto y Amaya
+        clasificaciones.splice(1, 0, "Roberto", "Amaya");
+
+        // Marta encabeza la clasificacion
+        clasificaciones.unshift("Marta");
+
+        // imprimir clasificaciones actualizadas
+        document.writeln(clasificaciones);
+    </script>
+
+</body>
+
+</html>
